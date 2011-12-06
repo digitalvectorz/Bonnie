@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- If you keep the following DOCTYPE tag in your interface
+     specification, xmllint can fetch the DTD over the Internet
+     for validation automatically. -->
+
+<!DOCTYPE node PUBLIC
+  "-//freedesktop//DTD D-Bus Object Introspection 1.0//EN"
+  "http://standards.freedesktop.org/dbus/1.0/introspect.dtd">
+
+<node name="/org/anized/bonnie">
+	<interface name="org.anized.bonnie">
+	<annotation name="org.freedesktop.DBus.GLib.CSymbol" value="bonnie"/>
+	
+		<!-- Method Definitions -->
+		<!-- register_applet(string applet_name, string bus_name, string bus_address):
+					returns boolean if successful -->
+    <method name="register_applet">
+			<arg type="as" name="a_reg_strs" direction="in"/>
+		</method>
+
+	</interface>
+</node>
